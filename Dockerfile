@@ -1,4 +1,4 @@
-FROM node:14.19.1
+FROM node:18.12.1
 
 WORKDIR /app
 COPY frontend/package.json ./
