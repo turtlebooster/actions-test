@@ -7,9 +7,9 @@ on:
 
 # 환경설정
 env:
-  DOCKER_IMAGE: ghcr.io/${{ github.actor }}/snowduck-world-react
+  DOCKER_IMAGE: snowduck-world-react
   VERSION: ${{ github.sha }}
-  NAME: go_cicd
+  NAME: snowduck-world-react
 
 jobs:
   # 빌드 Job
