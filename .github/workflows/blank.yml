@@ -3,7 +3,7 @@ name: CI/CD Docker
 # 트리거를 수행할 브랜치를 지정합니다.
 on:
   push:
-    branches: [ main ]
+    branches: [ frontend ]
 
 # 환경설정
 env:
@@ -60,4 +60,4 @@ jobs:
       - name: Docker run
         run: |
           docker stop ${{ env.NAME }} && docker rm ${{ env.NAME }} && docker rmi ${{ env.DOCKER_IMAGE }}:latest
-          docker run -d -p 3000:3000 --name ${{ env.NAME }} --restart always ${{ env.DOCKER_IMAGE }}:latest
+          docker run -d -p 3000:3000 --name ${{ env.NAME }} --f FEDockerfile --restart always ${{ env.DOCKER_IMAGE }}:latest
