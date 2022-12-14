@@ -4,7 +4,7 @@ WORKDIR /app
 
 ENV PATH /app/node_modules/.bin:$PATH
 
-COPY frontend/package.json /app/package.json
+COPY frontend /app/frontend
 RUN npm install 
 RUN npm install react-scripts@3.0.1 -g
 
